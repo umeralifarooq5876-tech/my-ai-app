@@ -1,0 +1,8 @@
+{
+  "name": "Obsidian Apex",
+  "description": "AI-Powered Study Planner & Exam Preparation Platform for Matric and High School Students.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
