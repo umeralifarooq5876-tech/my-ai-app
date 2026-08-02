@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getApiUrl } from "../utils/api";
 import { Subject, ScheduleSlot, StudyPlan, StudentProfile } from "../types";
 import {
   Sparkles,
@@ -106,7 +107,7 @@ export const AIPlannerModal: React.FC<AIPlannerModalProps> = ({
       setTimeout(() => setGenerationPhase("Analyzing student profile specs & topic weightages..."), 1000);
       setTimeout(() => setGenerationPhase("Structuring daily study blocks & active recall sessions..."), 2200);
 
-      const res = await fetch("/api/generate-plan", {
+      const res = await fetch(getApiUrl("/api/generate-plan"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

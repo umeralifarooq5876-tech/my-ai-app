@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getApiUrl } from "../utils/api";
 import { Subject, ScheduleSlot, ActiveTab, StudentProfile, StudyPlan } from "../types";
 import {
   Clock,
@@ -89,7 +90,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
     setAdjustSuccessMsg("");
 
     try {
-      const res = await fetch("/api/replan-schedule", {
+      const res = await fetch(getApiUrl("/api/replan-schedule"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
