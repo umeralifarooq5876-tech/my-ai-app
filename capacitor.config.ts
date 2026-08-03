@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.myapp.app',
-  appName: 'My App',
+  appName: 'Obsidian Apex',
   webDir: 'dist'
 };
 
